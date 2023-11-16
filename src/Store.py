@@ -1,6 +1,7 @@
 from StoreInventory import StoreInventory
 from BankAccount import BankAccount
 from Buyable import Buyable, BuyableGame, BuyableFood, BuyableClothing
+import tkinter as tk
 
 storeInventory = StoreInventory()
 
@@ -148,7 +149,7 @@ while(stillShopping):
     print("3. View your cart of held items")
     print("4. Review the items you already own")
     print("5. View the status of your financials")
-    print("6. YOUR CUSTOM IDEA HERE??")
+    print("6. Surprise")
     print("7. Exit program")
 
     userChoice = int(input())
