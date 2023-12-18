@@ -1,6 +1,8 @@
 from StoreInventory import StoreInventory
 from BankAccount import BankAccount
 from Buyable import Buyable, BuyableGame, BuyableFood, BuyableClothing
+from CustomContent import exampleMethod
+from Credits import Credit
 import tkinter as tk
 
 storeInventory = StoreInventory()
@@ -150,9 +152,17 @@ while(stillShopping):
     print("4. Review the items you already own")
     print("5. View the status of your financials")
     print("6. Surprise")
-    print("7. Exit program")
+    print("7. Credits")
+    print("8. Exit")
 
     userChoice = int(input())
+
+    try:
+        userChoice = int(input())
+    except ValueError:
+        print('Invalid input. Please enter a valid integer.')
+
+
 
     if userChoice == 1:
         viewCatalog()
@@ -165,8 +175,10 @@ while(stillShopping):
     elif userChoice == 5:
         reviewFinancials()
     elif userChoice == 6:
-        print("YOUR CONTENT HERE!")
+        exampleMethod()
     elif userChoice == 7:
+        Credit()
+    elif userChoice == 8:
         print('Thanks for shopping! Now exiting program ... ')
         stillShopping = False
     else:
